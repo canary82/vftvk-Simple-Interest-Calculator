@@ -19,7 +19,7 @@ h1 {
 }
 
 .row {
-    padding: 0 0 20px 90px;
+    padding: 0 0 15px 90px;
 }
 
 label {
@@ -30,4 +30,8 @@ label {
 input[name="years"] {
     display: inline-block;
     width: 10%;
+}
+
+.result-number {
+    background-color: yellow;
 }

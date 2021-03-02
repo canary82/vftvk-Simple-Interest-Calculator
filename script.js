@@ -22,7 +22,6 @@ function validate()
 {
     const principal_element = document.getElementById("principal");
     var principal = principal_element.value;
-    console.log(principal);
     if (Number(principal) <= 0 || principal == "") {
         alert("Enter a positive number for amount");
         principal_element.focus();

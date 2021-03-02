@@ -1,3 +1,4 @@
+// Compute Interest value
 function compute()
 {
     var principal = document.getElementById("principal").value;
@@ -9,18 +10,21 @@ function compute()
     document.getElementById('result').innerHTML = `If you deposit <span class="result-number">${principal}</span>,<br /> at an interest rate of <span class="result-number">${rate}%</span>.<br /> You will receive an amount of <span class="result-number">${interest.toFixed(2)}</span>,<br /> in the year <span class="result-number">${final_year}</span>`;
 }
 
+// Updates slider value
 function updateSlider()
 {
     var rate = document.getElementById("rate").value;
     document.getElementById('slider_value').innerHTML = `${rate}%`;
 }
 
+// Performs form validation
 function validate()
 {
     const principal_element = document.getElementById("principal");
     var principal = principal_element.value;
-    if (Number(principal) <= 0) {
-        alert("Enter a positive number");
+    console.log(principal);
+    if (Number(principal) <= 0 || principal == "") {
+        alert("Enter a positive number for amount");
         principal_element.focus();
         return false;
     }
